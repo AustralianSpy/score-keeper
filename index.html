@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">    <title>Score-Keeper</title>
+    <style>
+        body {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pop-up to optionally input player names. -->
+    <!-- <div id="start-game">
+        <h2 id="pselect">Enter your custom names.</h2>
+        <form name="players">
+            <label for="p1name">Enter Player 1:</label>
+            <input type="text" name="players" id="p1name" placeholder="Player 1">
+            <label for="p2name">Enter Player 2:</label>
+            <input type="text" name="players" id="p2name" placeholder="Player 2">
+            <button type="submit" id="start">Start</button><button type="submit" id="skip">Skip</button>
+        </form>
+        <p id="warning">*Please note...*<br>To prevent cheating, once you hit 'start' player names can only be changed by resetting the game.</p>
+    </div> -->
+
+    <main class="columns pt-6">
+        <div class="column is-half is-offset-one-quarter">
+            <section class="card">
+            <img src="imageheader.jpg" class="card-image" alt="">
+            <h1 class="card-header-title is-centered is-size-2 pb-0">
+                Virtual Score-Keeper
+            </h1>
+            <div class="card-content has-text-centered pt-0">
+                <h2 class="is-size-2 pb-2">
+                    <span id="p1score">0</span> to <span id="p2score">0</span>
+                </h2>
+                <label class="label is-inline" for="limit">Playing to:</label>
+                <div class="select is-rounded is-small">
+                    <select name="limit" id="limit">
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                        <option value="45">45</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+                
+                <p class="pt-3" id="instruct">Use the buttons below to keep score.</p>
+            </div>
+            <div class="card-footer" id="buttons">
+                <button class="button card-footer-item is-primary is-medium" id="p1Add">+1  Player 1</button>
+                <button class="button card-footer-item is-info is-medium" id="p2Add">+1  Player 2</button>
+                <button class="button card-footer-item is-danger is-medium" id="reset">Reset</button>
+            </div>
+        </section>
+        </div>
+        
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
