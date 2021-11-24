@@ -47,15 +47,14 @@ for (let button of buttonsContainer) {
         } else if (button.id === 'p1Add'){
             p1Score +=1;
             p1sText.innerHTML = p1Score;
-            gameOver = checkWinner();
         } else if (button.id === 'p2Add'){
             p2Score +=1;
             p2sText.innerHTML = p2Score;
-            gameOver = checkWinner();
         }
+        
+        gameOver = checkWinner();
         if (gameOver){
             buttonToggle();
         }
     })
 };
-
